@@ -12,6 +12,7 @@ import { BoardAdminComponent } from './components/board-admin/board-admin.compon
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {authInterceptorProviders} from './helpers/auth.interceptor';
+import { UploadFilesComponent } from './components/upload-files/upload-files.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {authInterceptorProviders} from './helpers/auth.interceptor';
     HomeComponent,
     ProfileComponent,
     BoardAdminComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    UploadFilesComponent
   ],
   imports: [
     BrowserModule,
