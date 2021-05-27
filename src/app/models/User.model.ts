@@ -1,5 +1,3 @@
-import {UserRole} from './UserRole.model';
-
 export class User {
   id?: any;
   username?: string;
