@@ -1,26 +1,58 @@
-<div class="container" *ngIf="currentUser; else loggedOut">
-  <header class="jumbotron">
-    <h3>
-      <strong>{{ currentUser.username }}</strong> Profile
-    </h3>
-  </header>
-  <p>
-    <strong>Token:</strong>
-    {{ currentUser.accessToken.substring(0, 20) }} ...
-    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-  </p>
-  <p>
-    <strong>Email:</strong>
-    {{ currentUser.email }}
-  </p>
-  <strong>Roles:</strong>
-  <ul>
-    <li *ngFor="let role of currentUser.roles">
-      {{ role }}
-    </li>
-  </ul>
-</div>
+<div *ngIf="user.id;" class="container">
+  <form >
+      <div class="input-group mb-3">
+        <span class="input-group-text">Username</span>
+        <input [(ngModel)]="user.username" class="form-control" disabled name="username" type="text">
+      </div>
 
-<ng-template #loggedOut>
-  Please login.
-</ng-template>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Email</span>
+        <input [(ngModel)]="user.email" class="form-control" disabled name="email" type="text">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">First Name</span>
+        <input [(ngModel)]="user.firstName" class="form-control" name="firstname" type="text">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Second Name</span>
+        <input [(ngModel)]="user.secondName" class="form-control" name="secondname" type="text">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Last Name</span>
+        <input [(ngModel)]="user.lastName" class="form-control" name="lastname" type="text">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Phone</span>
+        <input [(ngModel)]="user.phone" class="form-control" name="phone" type="text">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">Organization</span>
+        <input [(ngModel)]="user.organization" class="form-control" name="organization" type="text">
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-text">About</span>
+        <textarea [(ngModel)]="user.about" aria-label="About" class="form-control" name="about"></textarea>
+      </div>
+
+      <div class="input-group">
+        <span class="input-group-text">Admin?</span>
+        <input (change)="setAll($event)" [value]="admin" [checked]="currentUserAdmin" class="form-check-input" id="admin" name="admin"
+               type="checkbox">
+      </div>
+  </form>
+
+  <button (click)="updateUser()" class="badge badge-success mb-2" type="submit">Update</button>
+  <button (click)="updateRole()" class="badge badge-success mb-2" type="submit">Update ROle</button>
+  <p>{{message}}</p>
+
+  <div *ngIf="!user.id">
+    <br/>
+    <p>Cannot access this user...</p>
+  </div>
+</div>

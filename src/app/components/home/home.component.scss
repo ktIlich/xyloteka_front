@@ -1,0 +1,20 @@
+@import "src/assets/css/fonts";
+@import "src/assets/css/colors";
+
+.main {
+  //position: relative;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding-left: 30px;
+  //padding-right: 30px;
+
+  &_title {
+    font-weight: 500;
+    font-size: 36px;
+    color: $text-color-main;
+
+  }
+}

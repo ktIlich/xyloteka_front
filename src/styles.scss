@@ -1,1 +1,292 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/fonts";
+@import "assets/css/colors";
+//
+//html {
+//  box-sizing: border-box;
+//}
+//
+//
+//.container {
+//  padding-right: 15px;
+//  padding-left: 15px;
+//  margin-right: auto;
+//  margin-left: auto;
+//}
+//
+//body {
+//  background-color: $bg-color;
+//  font-family: Rubik, sans-serif;
+//}
+//
+//.row {
+//  display: flex;
+//  flex-wrap: wrap;
+//}
+//
+//.main {
+//  position: relative;
+//  display: flex;
+//  height: 100vh;
+//  flex-direction: column;
+//  padding-left: 30px;
+//  padding-right: 30px;
+//
+//  .logo {
+//    width: 250px;
+//    height: 250px;
+//
+//    img {
+//      width: 100%;
+//      height: 100%;
+//    }
+//  }
+//
+//  &_title {
+//    font-weight: 500;
+//    font-size: 36px;
+//    color: $text-color-main;
+//  }
+//
+//  &_display {
+//    display: flex;
+//    flex-grow: 1;
+//    justify-content: center;
+//
+//    .col {
+//      display: flex;
+//      flex-direction: column;
+//      justify-content: center;
+//      align-items: center;
+//    }
+//  }
+//}
+//
+//.global_menu {
+//  width: 100%;
+//  .menu_list {
+//    display: flex;
+//    width: 100%;
+//    padding: 0;
+//    justify-content: space-between;
+//    list-style: none;
+//    align-items: center;
+//
+//    & li {
+//      padding: 2px 5px;
+//
+//      & a {
+//        color: $text-color-main;
+//        text-decoration: none;
+//        font-size: 22px;
+//        font-weight: 400;
+//
+//        &:hover {
+//          text-decoration: none;
+//        }
+//      }
+//    }
+//
+//    &_first {
+//      flex-grow: 1;
+//    }
+//  }
+//}
+//
+//.content {
+//  padding: 30px;
+//
+//  .container {
+//    margin-bottom: 50px;
+//  }
+//
+//  ul {
+//    display: flex;
+//    width: 100%;
+//    padding: 0;
+//    list-style: none;
+//    justify-content: space-between;
+//    align-items: center;
+//
+//    li p, a {
+//      color: $text-color-main;
+//      text-decoration: none;
+//      font-size: 24px;
+//      padding: 0;
+//    }
+//  }
+//
+//  &_item {
+//    &s_wrap {
+//      display: flex;
+//      width: 100%;
+//      justify-content: space-between;
+//    }
+//
+//    position: relative;
+//    display: flex;
+//    width: 20%;
+//
+//    transition: all 0.5s;
+//
+//
+//    img {
+//      width: 100%;
+//      height: 100%;
+//    }
+//
+//    &_hover {
+//      position: absolute;
+//      display: none;
+//      flex-direction: column;
+//      color: $text-color-white;
+//      height: 100%;
+//      background: rgba(57, 57, 57, 0.8);
+//      border: 2px solid #fff;
+//      transition: all 0.5s;
+//
+//      h3 {
+//        font-size: 32px;
+//        padding: 10px 15px 0 25px;
+//      }
+//
+//      p {
+//        font-size: 22px;
+//        padding: 10px 25px 0 25px;
+//      }
+//    }
+//
+//    &:hover {
+//      .content_item_hover {
+//        display: flex;
+//
+//      }
+//    }
+//  }
+//}
+//
+//footer {
+//  padding: 50px 30px 30px;
+//
+//  a, p {
+//    color: $text-color-main;
+//    font-size: 22px;
+//    text-decoration: none;
+//    padding: 0;
+//  }
+//
+//  .row {
+//    justify-content: space-between;
+//    align-items: center;
+//  }
+//
+//  .info {
+//    display: flex;
+//  }
+//
+//  .logo {
+//    display: flex;
+//    margin-right: 25px;
+//
+//    img {
+//      width: 64px;
+//      height: 64px;
+//    }
+//  }
+//}
+//
+//
+//.menu {
+//  position: fixed;
+//  height: 100%;
+//  width: 100%;
+//  background-color: #222;
+//  opacity: 0.95;
+//  z-index: 800;
+//  display: none;
+//  align-items: center;
+//  justify-content: center;
+//
+//  &_active {
+//    display: flex;
+//  }
+//
+//  &__list {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    justify-content: center;
+//    padding-left: 0;
+//    list-style: none;
+//    text-align: center;
+//    width: 100%;
+//    height: 100%;
+//    transition: all 0.5s;
+//
+//    li {
+//      display: flex;
+//      padding: 2px;
+//      align-items: center;
+//      justify-content: center;
+//      position: relative;
+//
+//      &:hover {
+//        cursor: pointer;
+//        //background-color: $main-color;
+//      }
+//    }
+//
+//    a {
+//      font-size: 32px;
+//      text-transform: uppercase;
+//      text-decoration: none;
+//      color: #fff;
+//    }
+//  }
+//
+//  &_btn {
+//    position: relative;
+//    background-color: transparent;
+//    border:none;
+//    font-size: 36px;
+//    color: $text-color-main;
+//    padding: 0 5px;
+//
+//    &:hover{
+//      cursor: pointer;
+//    }
+//    &_close {
+//      position: absolute;
+//      right: 15%;
+//      top: 10%;
+//      font-size: 54px;
+//      text-decoration: none;
+//      color: #fff;
+//      background-color: transparent;
+//      border:none;
+//      z-index: 850;
+//      &:hover{
+//        cursor: pointer;
+//      }
+//    }
+//  }
+//}
+//
+//@keyframes scrolldown {
+//  0% {
+//    transform: translateY(0);
+//  }
+//  50% {
+//    transform: translateY(110%);
+//  }
+//  100% {
+//    transform: translateY(0);
+//  }
+//}
+//
+//.scroll-down {
+//  position: absolute;
+//  left: 50%;
+//  bottom: 5%;
+//  animation: scrolldown 3s ease-in-out 3s infinite;
+//  color: $text-color-main;
+//}

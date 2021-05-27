@@ -1,10 +1,5 @@
-<div class="col-md-12">
+<div class="container login">
   <div class="card card-container">
-    <img
-      id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-      class="profile-img-card"
-    />
     <form
       *ngIf="!isLoggedIn"
       name="form"
@@ -15,6 +10,7 @@
       <div class="form-group">
         <label for="username">Username</label>
         <input
+          id="username"
           type="text"
           class="form-control"
           name="username"
@@ -33,6 +29,7 @@
       <div class="form-group">
         <label for="password">Password</label>
         <input
+          id="password"
           type="password"
           class="form-control"
           name="password"
@@ -48,7 +45,7 @@
         >
           <div *ngIf="password.errors.required">Password is required</div>
           <div *ngIf="password.errors.minlength">
-            Password must be at least 6 characters
+            Password must be at least 8 characters
           </div>
         </div>
       </div>
@@ -68,8 +65,8 @@
       </div>
     </form>
 
-    <div class="alert alert-success" *ngIf="isLoggedIn">
-      Logged in as {{ roles }}.
-    </div>
+<!--    <div class="alert alert-success" *ngIf="isLoggedIn">-->
+<!--      Logged in as {{ roles }}.-->
+<!--    </div>-->
   </div>
 </div>

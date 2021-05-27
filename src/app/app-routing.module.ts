@@ -7,11 +7,13 @@ import {ProfileComponent} from './components/profile/profile.component';
 import {BoardAdminComponent} from './components/board-admin/board-admin.component';
 import {BoardUserComponent} from './components/board-user/board-user.component';
 import {UploadFilesComponent} from "./components/upload-files/upload-files.component";
+import {SamplesComponent} from "./components/samples/samples.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'files', component: UploadFilesComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'samples', component: SamplesComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'user', component: BoardUserComponent },
